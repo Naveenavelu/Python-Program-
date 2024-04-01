@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jan 15 15:46:48 2020 EET
+@author: Naveena 
+
+
+For Invoice Reconcilliation
+
+SQL query :
+ 
+    select distinct productid as PRODUCTID, bpid as BPID, 'DFLTPACKAGE' as PCKG ,feeamount as FEEAMOUNT, feebasis as FEEUNIT , feetype from PROREP_ADM.fbl_invoiceextract 
+where productid not in  ('8302','8306','8310','8801','8808','8901','9306','8254', '8255', '8242', '8243', '8246', '8247', '8248', '8249', '8614', '8615', '8616', '8617', '8700', '8701', '8702', '8714', '8703', '8704', '8705', '8706', '8707', '8708', '8709', '8710', '8711', '8712', '8713', '8008', '4600', '4601', '4604', '4605', '4610', '4611', '4612', '4614', '4615', '4616', '8000', '8001', '8002', '8003', '8005', '8007', '8215', '8216', '8217', '8250', '8251', '8252', '8253', '8009', '8010', '8011', '8012')   order by productid, bpid;
+
+Excluded Manual fee and Holding fee in thi sverification script
+ Ignore the case if there is minor difference in the calculated fee amount value that is  due to rounding the decimal
+    
+"""
+
+import pandas as pd
+#import numpy as np
+
+from rules1 import recon_diff
+import math
+
+def cal_fee_amt(datum):
+    
+    prod_id = datum['PRODUCTID']
+    pack_id = datum['PCKG']
+    fee_basis = datum['FEEUNIT']
+    fee_basis1 =int(fee_basis)
+    
+    feeamount = recon_diff (prod_id, pack_id, fee_basis1)
+    #print ('feebasis',fee_basis)
+    #print ('prod_id',prod_id)
+   # feeamount1=int(feeamount)
+   # print(type(feeamount))  
+   #Round the feeamount into 2
+    return round(feeamount, 2)
+
+
+def isclose(datum):
+    diff =  math.isclose(datum['CALC_FEE_AMT'], datum['FEEAMOUNT'])
+    return diff
+
+
+#Start of code
+
+
+print('Enter the output file name')
+outputfilename = input()
+
+#print('Enter the combilned file name')
+#com = input()
+
+
+
+
+#This holds the data that is already invoiced by Infinity
+invoiced_data = pd.read_excel('input/INV.xlsx')
+invoiced_data['FEEAMOUNT'] = pd.to_numeric(invoiced_data['FEEAMOUNT'], errors='coerce')
+#print ('invoiced_data',invoiced_data)
+#round the amount to 2 and basis to 6
+invoiced_data['FEEAMOUNT'] = invoiced_data.apply(lambda datum: round(datum['FEEAMOUNT'], 2), axis=1)
+#print(invoiced_data)
+# GRoup the data from the Inputfile
+data_bp = invoiced_data.filter(['PRODUCTID', 'BPID', 'PCKG', 'FEEAMOUNT','FEEUNIT'])
+#print ('invoiced_data',data_bp)
+
+
+combined_data = pd.concat([ data_bp], axis=0, sort=True)
+#Calculate the fee at this level.
+combined_data['CALC_FEE_AMT'] = combined_data.apply(lambda datum: cal_fee_amt(datum), axis=1)
+#Reorder the column order
+combined_data = combined_data[['PRODUCTID', 'BPID', 'PCKG', 'CALC_FEE_AMT','FEEUNIT']]
+#Ignore the cases where fee is calculated as 0.
+combined_data = combined_data[combined_data['CALC_FEE_AMT'] > 0]
+combined_data['CALC_FEE_AMT'] = combined_data.apply(lambda datum: round(datum['CALC_FEE_AMT'], 2), axis=1)
+#print (combined_data)
+
+
+merged = pd.merge(left=combined_data, right=invoiced_data, how='inner', left_on=['PRODUCTID', 'BPID','PCKG','FEEUNIT'], right_on=['PRODUCTID', 'BPID','PCKG','FEEUNIT'])
+#merged = pd.merge(left=combined_data, right=invoiced_data)
+#print ('merged',merged)
+merged['FEEAMT_DIFF'] = merged.apply(lambda datum: isclose(datum), axis=1)
+merged.reset_index(drop=True, inplace=True)
+#print (merged)
+#merged.reset_index(drop=False, inplace=False)
+
+
+merged.to_excel('output/' + outputfilename + '.xlsx')
+###combined_data.to_excel('output/' + com + '.xlsx')
