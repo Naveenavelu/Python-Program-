@@ -5,718 +5,718 @@ Created on Thu Mar  7 18:25:32 2024
 @author: Naveena
 """
 
-def recon_diff(prod_id, pack_id, basis):
+def recon_diff(BillID, pack_id, Quantity):
 
   feeamount = 0
 
   if False:
     feeamount = 0
 #CAfees
-  elif prod_id == 8230 and  pack_id =='DFLTPCKGSA':
+  elif BillID == 8230 and  pack_id =='PCK':
           feeamount =     55
-  elif prod_id == 8230 and  pack_id == 'DFLTPACKAGE':
+  elif BillID == 8230 and  pack_id == 'PCKG':
             feeamount =     55
-  elif prod_id == 8231 and  pack_id == 'DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8231 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-      feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-      feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8231 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8231 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8231 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8231 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8231 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8232 and  pack_id =='DFLTPACKAGE':
-      feeamount =     240 * basis
-  elif prod_id == 8232 and  pack_id =='DFLTPCKGSA':
-      feeamount =     240 * basis
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8233 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8233 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8234 and  pack_id =='DFLTPACKAGE':
+  elif BillID == 8231 and  pack_id == 'PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8231 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+      feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+      feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8231 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8231 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8231 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8231 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8231 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8232 and  pack_id =='PCKG':
+      feeamount =     240 * Quantity
+  elif BillID == 8232 and  pack_id =='PCK':
+      feeamount =     240 * Quantity
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8233 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8233 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8234 and  pack_id =='PCKG':
           feeamount =     30
-  elif prod_id == 8234 and  pack_id =='DFLTPCKGSA':
+  elif BillID == 8234 and  pack_id =='PCK':
           feeamount =     30
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8235 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8235 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8236 and  pack_id =='DFLTPACKAGE':
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8235 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8235 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8236 and  pack_id =='PCKG':
           feeamount =     1100
-  elif prod_id == 8236 and  pack_id =='DFLTPCKGSA':
+  elif BillID == 8236 and  pack_id =='PCK':
           feeamount =     1100
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8237 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8237 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8238 and  pack_id =='DFLTPCKGSA':
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8237 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8237 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41  )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8238 and  pack_id =='PCK':
           feeamount =     240
-  elif prod_id == 8238 and  pack_id =='DFLTPACKAGE':
+  elif BillID == 8238 and  pack_id =='PCKG':
           feeamount =     240
-  elif prod_id == 8244 and  pack_id =='DFLTPCKGSA':
+  elif BillID == 8244 and  pack_id =='PCK':
           feeamount =     240
-  elif prod_id == 8244 and  pack_id =='DFLTPACKAGE':
+  elif BillID == 8244 and  pack_id =='PCKG':
           feeamount =     240
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.49
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):	
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.41 +   (  750 *  0.49 )
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
-  elif prod_id == 8245 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8245 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8257 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8257 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-         feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-         feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8259 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-         feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8259 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-           feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8261 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8261 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8263 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8263 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.46
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.38 +   (  750 *  0.46 )
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
-  elif prod_id == 8265 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8265 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.81
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.81
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.65 +   (  750 *  0.81 )
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.65 +   (  750 *  0.81 )
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
-  elif prod_id == 8267 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65  )  +   (  5000 *  0.49 ) +   (  15000 *  0.4 ) +   (  25000 *  0.32 )
-  elif prod_id == 8267 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.81
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  250 )  and   ( basis  <=  1000 ):
-          feeamount =   (    basis  -     250 )   *  0.81
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.65 +   (  750 *  0.81 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  1000 )  and   ( basis  <=  5000 ):
-          feeamount =   ( basis  -  1000 )   *  0.65 +   (  750 *  0.81 )
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  5000 )  and   ( basis  <=  10000 ):
-          feeamount =   (    basis  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  10000 )  and   ( basis  <=  25000 ):
-          feeamount =   (    basis  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  25000 )  and   ( basis  <=  50000 ):
-          feeamount =   (    basis  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
-  elif prod_id == 8269 and  pack_id =='DFLTPACKAGE' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
-  elif prod_id == 8269 and  pack_id =='DFLTPCKGSA' and  ( basis  >  50000 ):
-          feeamount =   (    basis  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
-  elif prod_id == 8535 and  pack_id =='DFLTPACKAGE'   : 
-          feeamount =    basis  *     0.35
-  elif prod_id == 8535 and  pack_id =='DFLTPCKGSA'   : 
-          feeamount =     basis *     0.35
-  elif prod_id == 8543 and  pack_id =='DFLTPCKGSA':
-          feeamount =  0.25 * basis
-  elif prod_id == 8543 and  pack_id =='DFLTPACKAGE':
-          feeamount =  0.25 * basis
-  elif prod_id == 8545 and  pack_id =='DFLTPACKAGE':
-          feeamount =  0.10 *basis
-  elif prod_id == 8545 and  pack_id =='DFLTPCKGSA':
-          feeamount=  0.10 *basis
-  elif prod_id == 8619 and  pack_id =='DFLTPACKAGE':
-          feeamount =  25 * basis
-  elif prod_id == 8619 and  pack_id =='DFLTPCKGSA':
-          feeamount =  25 * basis
-  elif prod_id == 8620 and  pack_id =='DFLTPCKGSA':
-          feeamount =  5 * basis
-  elif prod_id == 8620 and  pack_id =='DFLTPACKAGE':
-          feeamount =  5 * basis
-  elif prod_id == 8621 and  pack_id =='DFLTPACKAGE':
-          feeamount =  0.049  *basis
-  elif prod_id == 8621 and  pack_id =='DFLTPCKGSA':
-          feeamount =  0.049  * basis
-  elif prod_id == 8622 and  pack_id =='DFLTPACKAGE':
-          feeamount =  0.049  * basis
-  elif prod_id == 8622 and  pack_id =='DFLTPCKGSA':
-          feeamount =  0.049  * basis
-  elif prod_id == 9535 and  pack_id =='DFLTPCKGSA': 
-          feeamount =    basis  *     0.35
-  elif prod_id == 9535 and  pack_id =='DFLTPACKAGE': 
-          feeamount =     basis *     0.35
-  elif prod_id == 1004  and   pack_id =='DFLTPCKGSA'  : feeamount = basis  *  2
-  elif prod_id == 1004  and   pack_id =='DFLTPACKAGE'  :feeamount = basis  *  2
-  elif prod_id == 8100  and   pack_id =='DFLTPCKGSA'  : feeamount =  2000
-  elif prod_id == 8100  and   pack_id =='DFLTPACKAGE'  : feeamount =  2000
-  elif prod_id==8101 and pack_id=='DFLTPCKGSA' and (basis > 20):
-      feeamount = (basis-20)*110 
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.49
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):	
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.41 +   (  750 *  0.49 )
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.33 +   (     750 *  0.49 )   +   (  4000 *  0.41 )
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 )
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.26 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 )
+  elif BillID == 8245 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8245 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.14 +   (     750 *  0.49 )   +   (  4000 *  0.41 )  +   (  5000 *  0.33 ) +   (  15000 *  0.30 ) +   (  25000 *  0.26 )
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8257 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8257 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+         feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+         feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8259 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+         feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8259 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+           feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8261 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8261 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8263 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8263 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.46
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.38 +   (  750 *  0.46 )
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.30 +   (     750 *  0.46 )   +   (  4000 *  0.38 )
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.27 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 )
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.23 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 )
+  elif BillID == 8265 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8265 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.11 +   (     750 *  0.46 )   +   (  4000 *  0.38 )  +   (  5000 *  0.30 ) +   (  15000 *  0.27 ) +   (  25000 *  0.23 )
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.81
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.81
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.65 +   (  750 *  0.81 )
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.65 +   (  750 *  0.81 )
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
+  elif BillID == 8267 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65  )  +   (  5000 *  0.49 ) +   (  15000 *  0.4 ) +   (  25000 *  0.32 )
+  elif BillID == 8267 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.81
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  250 )  and   ( Quantity  <=  1000 ):
+          feeamount =   (    Quantity  -     250 )   *  0.81
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.65 +   (  750 *  0.81 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ):
+          feeamount =   ( Quantity  -  1000 )   *  0.65 +   (  750 *  0.81 )
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ):
+          feeamount =   (    Quantity  -     5000 )   *  0.49 +   (     750 *  0.81 )   +   (  4000 *  0.65 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ):
+          feeamount =   (    Quantity  -     10000 )   *  0.40 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ):
+          feeamount =   (    Quantity  -     25000 )   *  0.32 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 )
+  elif BillID == 8269 and  pack_id =='PCKG' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
+  elif BillID == 8269 and  pack_id =='PCK' and  ( Quantity  >  50000 ):
+          feeamount =   (    Quantity  -     50000 )   *  0.08 +   (     750 *  0.81 )   +   (  4000 *  0.65 )  +   (  5000 *  0.49 ) +   (  15000 *  0.40 ) +   (  25000 *  0.32 )
+  elif BillID == 8535 and  pack_id =='PCKG'   : 
+          feeamount =    Quantity  *     0.35
+  elif BillID == 8535 and  pack_id =='PCK'   : 
+          feeamount =     Quantity *     0.35
+  elif BillID == 8543 and  pack_id =='PCK':
+          feeamount =  0.25 * Quantity
+  elif BillID == 8543 and  pack_id =='PCKG':
+          feeamount =  0.25 * Quantity
+  elif BillID == 8545 and  pack_id =='PCKG':
+          feeamount =  0.10 *Quantity
+  elif BillID == 8545 and  pack_id =='PCK':
+          feeamount=  0.10 *Quantity
+  elif BillID == 8619 and  pack_id =='PCKG':
+          feeamount =  25 * Quantity
+  elif BillID == 8619 and  pack_id =='PCK':
+          feeamount =  25 * Quantity
+  elif BillID == 8620 and  pack_id =='PCK':
+          feeamount =  5 * Quantity
+  elif BillID == 8620 and  pack_id =='PCKG':
+          feeamount =  5 * Quantity
+  elif BillID == 8621 and  pack_id =='PCKG':
+          feeamount =  0.049  *Quantity
+  elif BillID == 8621 and  pack_id =='PCK':
+          feeamount =  0.049  * Quantity
+  elif BillID == 8622 and  pack_id =='PCKG':
+          feeamount =  0.049  * Quantity
+  elif BillID == 8622 and  pack_id =='PCK':
+          feeamount =  0.049  * Quantity
+  elif BillID == 9535 and  pack_id =='PCK': 
+          feeamount =    Quantity  *     0.35
+  elif BillID == 9535 and  pack_id =='PCKG': 
+          feeamount =     Quantity *     0.35
+  elif BillID == 1004  and   pack_id =='PCK'  : feeamount = Quantity  *  2
+  elif BillID == 1004  and   pack_id =='PCKG'  :feeamount = Quantity  *  2
+  elif BillID == 8100  and   pack_id =='PCK'  : feeamount =  2000
+  elif BillID == 8100  and   pack_id =='PCKG'  : feeamount =  2000
+  elif BillID==8101 and pack_id=='PCK' and (Quantity > 20):
+      feeamount = (Quantity-20)*110 
       
-  elif prod_id==8101 and pack_id=='DFLTPACKAGE' and (basis > 20):
-          feeamount = (basis-20)*110 
-  elif prod_id == 8101  and   pack_id =='DFLTPCKGSA' and ( basis  >  20 ): feeamount =    basis   *  110
-  elif prod_id == 8101  and   pack_id =='DFLTPACKAGE'and ( basis  >  20 ): feeamount =   basis   *  110
-  elif prod_id == 8102  and   pack_id =='DFLTPACKAGE'  :  feeamount =  2500
-  elif prod_id == 8102  and   pack_id =='DFLTPCKGSA'  :  feeamount =  2500
-  elif prod_id == 8103  and   pack_id =='DFLTPACKAGE'  : feeamount =     500
-  elif prod_id == 8103  and   pack_id =='DFLTPCKGSA'  : feeamount =     500
-  elif prod_id == 8104  and   pack_id =='DFLTPCKGSA'  :  feeamount =  150
-  elif prod_id == 8104  and   pack_id =='DFLTPACKAGE'  :  feeamount =  150
-  elif prod_id == 8105  and   pack_id =='DFLTPACKAGE'  :feeamount = 300
-  elif prod_id == 8105  and   pack_id =='DFLTPCKGSA'  :feeamount = 300
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA' and ( basis  >  250 )  and   ( basis  <=  1000 ): feeamount =   (    basis  -     250 )   *  0.6
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE' and( basis  >  250 )  and   ( basis  <=  1000 ): feeamount =   (    basis  -     250 )   *  0.6
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  1000 )  and   ( basis  <=  5000 ): feeamount =   ( basis  -  1000 )   *  0.48 +   (  750 *  0.6 )
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  1000 )  and   ( basis  <=  5000 ): feeamount =   ( basis  -  1000 )   *  0.48 +   (  750 *  0.6 )
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  5000 )  and   ( basis  <=  10000 ): feeamount =   (    basis  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  5000 )  and   ( basis  <=  10000 ): feeamount =   (    basis  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  10000 )  and   ( basis  <=  25000 ): feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  10000 )  and   ( basis  <=  25000 ): feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  25000 )  and   ( basis  <=  50000 ): feeamount =   (    basis  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  25000 )  and   ( basis  <=  50000 ): feeamount =   (    basis  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
-  elif prod_id == 8239  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  50000 ): feeamount =   (    basis  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
-  elif prod_id == 8239  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  50000 ): feeamount =   (    basis  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  250 )  and   ( basis  <=  1000 ): feeamount =   (    basis  -     250 )   *  0.6
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  250 )  and   ( basis  <=  1000 ): feeamount =   (    basis  -     250 )   *  0.6
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  :feeamount =   basis  *  0.58
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  :feeamount =   basis  *  0.58
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  1000 )  and   ( basis  <=  5000 ): feeamount =   ( basis  -  1000 )   *  0.48 +   (  750 *  0.6 )
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  1000 )  and   ( basis  <=  5000 ): feeamount =   ( basis  -  1000 )   *  0.48 +   (  750 *  0.6 )
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  5000 )  and   ( basis  <=  10000 ): feeamount =   (    basis  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  5000 )  and   ( basis  <=  10000 ): feeamount =   (    basis  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  10000 )  and   ( basis  <=  25000 ): feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  10000 )  and   ( basis  <=  25000 ): feeamount =   (    basis  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  25000 )  and   ( basis  <=  50000 ): feeamount =   (    basis  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  25000 )  and   ( basis  <=  50000 ): feeamount =   (    basis  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
-  elif prod_id == 8240  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  50000 ): feeamount =   (    basis  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
-  elif prod_id == 8240  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  50000 ): feeamount =   (    basis  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
-  elif prod_id == 8241  and   pack_id =='DFLTPCKGSA': feeamount =    200
-  elif prod_id == 8241  and   pack_id =='DFLTPACKAGE': feeamount =    200
-  elif prod_id == 8300  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  0 )  and   ( basis  <=  25000): feeamount =   (    basis  )   *  0.07
-  elif prod_id == 8300  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  0 )  and   ( basis  <=  25000): feeamount =   (basis)   *  0.07
-  elif prod_id == 8300  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  25000 )  and   ( basis  <=  100000): feeamount =   (basis-25000)   *  0.05 + (  25000 *  0.07 )
-  elif prod_id == 8300  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  25000 )  and   ( basis  <=  100000): feeamount =   (basis-25000)   *  0.05 + (  25000 *  0.07 )
-  elif prod_id == 8300  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  100000 )  and   ( basis  <=  400000): feeamount =   (basis-100000)   *  0.03 + (  75000 *  0.05 ) + (  25000 *  0.07 )
-  elif prod_id == 8300  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  100000 )  and   ( basis  <=  400000): feeamount =   (basis-100000)   *  0.03 + (  75000 *  0.05 ) + (  25000 *  0.07 )
-  elif prod_id == 8300  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  400000 )  : feeamount =   (basis-400000)   *  0.015 + (  300000 *  0.03 ) + (  75000 *  0.05 ) + (  25000 *  0.07 )
-  elif prod_id == 8300  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  400000 )  : feeamount =   (basis-400000)   *  0.015 + (  300000 *  0.03 ) + (  75000 *  0.05 ) + (  25000 *  0.07 )
-  elif prod_id == 8302  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  0 ): feeamount = basis  *  0.000041
-  elif prod_id == 8302  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  0 ): feeamount = basis  *  0.000041
-  elif prod_id == 8302  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  0 ): feeamount = basis  *  0.000041
-  elif prod_id == 8302  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  0 ): feeamount = basis  *  0.000041
-  elif prod_id == 8303  and   pack_id =='DFLTPACKAGE':feeamount =  0.18  * basis
-  elif prod_id == 8303  and   pack_id =='DFLTPCKGSA':feeamount =  0.18  * basis
-  elif prod_id == 8304  and   pack_id =='DFLTPACKAGE'     : feeamount =    basis  *  40
-  elif prod_id == 8304  and   pack_id =='DFLTPCKGSA'     : feeamount =    basis  *  40
-  elif prod_id == 8306  and   pack_id =='DFLTPACKAGE'  and   ( basis  <  5000000001 ): feeamount = basis  *     0.000024
-  elif prod_id == 8306  and   pack_id =='DFLTPCKGSA'  and   ( basis  <  5000000001 ): feeamount = basis  *     0.000024
-  elif prod_id == 8306  and   pack_id =='DFLTPACKAGE'  and   ( basis  >=  5000000001 )  and   ( basis  <  10000000001 ): feeamount =   (    basis  -     5000000000 )   *     0.00002   +   (  5000000000 *  0.000024 )
-  elif prod_id == 8306  and   pack_id =='DFLTPCKGSA'  and   ( basis  >=  5000000001 )  and   ( basis  <  10000000001 ): feeamount =   (    basis  -     5000000000 )   *     0.00002   +   (  5000000000 *  0.000024 )
-  elif prod_id == 8306  and   pack_id =='DFLTPACKAGE'  and   ( basis  >=  10000000001 )  and   ( basis  <  40000000001 ): feeamount =   ( basis  -     10000000000 )   *  0.000016  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 )
-  elif prod_id == 8306  and   pack_id =='DFLTPCKGSA'  and   ( basis  >=  10000000001 )  and   ( basis  <  40000000001 ): feeamount =   ( basis  -     10000000000 )   *  0.000016  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 )
-  elif prod_id == 8306  and   pack_id =='DFLTPACKAGE'  and   ( basis  >=  40000000001 ): feeamount =   (    basis  -     40000000000 )   *     0.000012  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 ) +   (  30000000000 *  0.000016 )
-  elif prod_id == 8306  and   pack_id =='DFLTPCKGSA'  and   ( basis  >=  40000000001 ): feeamount =   (    basis  -     40000000000 )   *     0.000012  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 ) +   (  30000000000 *  0.000016 )
-  elif prod_id == 8307  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  0 ): feeamount = basis  *     0.018
-  elif prod_id == 8307  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  0 ): feeamount = basis  *     0.018
-  elif prod_id == 8308  and   pack_id =='DFLTPACKAGE' and( basis  >  0 ): feeamount = basis  *  25
-  elif prod_id == 8308  and   pack_id =='DFLTPCKGSA' and ( basis  >  0 ): feeamount = basis  *  25
-  elif prod_id == 8309  and   pack_id =='DFLTPACKAGE' :feeamount =  0.18  * basis
-  elif prod_id == 8309  and   pack_id =='DFLTPCKGSA' :feeamount =  0.18  * basis
-  elif prod_id == 8310  and   pack_id =='DFLTPCKGSA'  and   ( basis  >  0 ): feeamount = basis  *  0.0000024
-  elif prod_id == 8310  and   pack_id =='DFLTPACKAGE'  and   ( basis  >  0 ): feeamount = basis  *  0.0000024
-  elif prod_id == 8402  and   pack_id =='DFLTPACKAGE'  :feeamount =  basis * 0.42
-  elif prod_id == 8402  and   pack_id =='DFLTPCKGSA'  :feeamount =  basis * 0.42
-  elif prod_id == 8404  and   pack_id =='DFLTPACKAGE'  :feeamount =  basis * 0.42
-  elif prod_id == 8404  and   pack_id =='DFLTPCKGSA'  :feeamount =  basis * 0.42
-  elif prod_id == 8406  and   pack_id =='DFLTPACKAGE'  :feeamount =   basis *  0.06
-  elif prod_id == 8406  and   pack_id =='DFLTPCKGSA'  :feeamount =   basis *  0.06
-  elif prod_id == 8413  and   pack_id =='DFLTPCKGSA'     : feeamount =     0.5 * basis
-  elif prod_id == 8413  and   pack_id =='DFLTPACKAGE'     : feeamount =     0.5 * basis
-  elif prod_id == 8415  and   pack_id =='DFLTPCKGSA'  : feeamount =     0.5 * basis
-  elif prod_id == 8415  and   pack_id =='DFLTPACKAGE'  : feeamount =     0.5 * basis
-  elif prod_id == 8424  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.50 * basis
-  elif prod_id == 8424  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.50 * basis
-  elif prod_id == 8429  and   pack_id =='DFLTPACKAGE'  :feeamount =   basis *  0.60
-  elif prod_id == 8429  and   pack_id =='DFLTPCKGSA'  :feeamount =   basis *  0.60
-  elif prod_id == 8446  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.024 * basis
-  elif prod_id == 8446  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.024 * basis
-  elif prod_id == 8502  and   pack_id =='DFLTPCKGSA'  :feeamount =  basis * 0.42
-  elif prod_id == 8502  and   pack_id =='DFLTPACKAGE'  :feeamount =  basis * 0.42
-  elif prod_id == 8504  and   pack_id =='DFLTPCKGSA'  :feeamount =  basis * 0.42
-  elif prod_id == 8504  and   pack_id =='DFLTPACKAGE'  :feeamount =  basis * 0.42
-  elif prod_id == 8506  and   pack_id =='DFLTPCKGSA'  :feeamount =   basis *  0.08
-  elif prod_id == 8506  and   pack_id =='DFLTPACKAGE'  :feeamount =   basis *  0.08
-  elif prod_id == 8513  and   pack_id =='DFLTPCKGSA'     : feeamount =     0.5 * basis
-  elif prod_id == 8513  and   pack_id =='DFLTPACKAGE'     : feeamount =     0.5 * basis
-  elif prod_id == 8515  and   pack_id =='DFLTPCKGSA'  : feeamount =     0.5 * basis
-  elif prod_id == 8515  and   pack_id =='DFLTPACKAGE'  : feeamount =     0.5 * basis
-  elif prod_id == 8520  and   pack_id =='DFLTPCKGSA'  :feeamount = basis * 0.07
-  elif prod_id == 8520  and   pack_id =='DFLTPACKAGE'  :feeamount = basis * 0.07
-  elif prod_id == 8521  and   pack_id =='DFLTPCKGSA'  :feeamount =  basis  *  0.6
-  elif prod_id == 8521  and   pack_id =='DFLTPACKAGE'  :feeamount =  basis  *  0.6
-  elif prod_id == 8524  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.50 * basis
-  elif prod_id == 8524  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.50 * basis
-  elif prod_id == 8529  and   pack_id =='DFLTPCKGSA'  :feeamount =   basis *  0.60
-  elif prod_id == 8529  and   pack_id =='DFLTPACKAGE'  :feeamount =   basis *  0.60
-  elif prod_id == 8531  and   pack_id =='DFLTPCKGSA'  :  feeamount =     0.25 * basis
-  elif prod_id == 8531  and   pack_id =='DFLTPACKAGE'  :  feeamount =     0.25 * basis
-  elif prod_id == 8532  and   pack_id =='DFLTPCKGSA'  :  feeamount =     0.25 * basis
-  elif prod_id == 8532  and   pack_id =='DFLTPACKAGE'  :  feeamount =     0.25 * basis
-  elif prod_id == 8533  and   pack_id =='DFLTPCKGSA'  :  feeamount =     0.25 * basis
-  elif prod_id == 8533  and   pack_id =='DFLTPACKAGE'  :  feeamount =     0.25 * basis
-  elif prod_id == 8534  and   pack_id =='DFLTPACKAGE'  :  feeamount =     0.25 * basis
-  elif prod_id == 8534  and   pack_id =='DFLTPCKGSA'  :  feeamount =     0.25 * basis
-  elif prod_id == 8538  and   pack_id =='DFLTPCKGSA'  :feeamount = basis * 2.50  
-  elif prod_id == 8538  and   pack_id =='DFLTPACKAGE'  :feeamount = basis * 2.50
-  elif prod_id == 8539  and   pack_id =='DFLTPACKAGE'  :feeamount = basis * 2.50
-  elif prod_id == 8539  and   pack_id =='DFLTPCKGSA'  :feeamount = basis * 2.50
-  elif prod_id == 8540  and   pack_id =='DFLTPCKGSA'  :feeamount = basis * 2.50
-  elif prod_id == 8540  and   pack_id =='DFLTPACKAGE'  :feeamount = basis * 2.50
-  elif prod_id == 8541  and   pack_id =='DFLTPCKGSA'  :feeamount = basis * 2.50
-  elif prod_id == 8541  and   pack_id =='DFLTPACKAGE'  :feeamount = basis * 2.50
-  elif prod_id == 8546  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.024 * basis
-  elif prod_id == 8546  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.024 * basis
-  elif prod_id == 8547  and   pack_id =='DFLTPCKGSA'  :feeamount = basis  *  0.07
-  elif prod_id == 8547  and   pack_id =='DFLTPACKAGE'  :feeamount = basis  *  0.07
-  elif prod_id == 8600  and   pack_id =='DFLTPACKAGE'  : feeamount = basis  *     0.5
-  elif prod_id == 8600  and   pack_id =='DFLTPCKGSA'  : feeamount = basis  *     0.5
-  elif prod_id == 8601  and   pack_id =='DFLTPCKGSA'  : feeamount = basis  *     2.5
-  elif prod_id == 8601  and   pack_id =='DFLTPACKAGE'  : feeamount = basis  *     2.5
-  elif prod_id == 8602  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8602  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8604  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8604  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8605  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8605  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8606  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8606  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8607  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8607  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8608  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8608  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8609  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8609  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8611  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8611  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8612  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8612  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8613  and   pack_id =='DFLTPACKAGE'  :feeamount =  0.049 * basis
-  elif prod_id == 8613  and   pack_id =='DFLTPCKGSA'  :feeamount =  0.049 * basis
-  elif prod_id == 8618  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8618  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8623  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8623  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8624  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8624  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8628  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8628  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8629  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.049 * basis
-  elif prod_id == 8629  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.049 * basis
-  elif prod_id == 8630  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.011 * basis
-  elif prod_id == 8630  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.011 * basis
-  elif prod_id == 8631  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.011 * basis
-  elif prod_id == 8631  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.011 * basis
-  elif prod_id == 8632  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.011 * basis
-  elif prod_id == 8632  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.011 * basis
-  elif prod_id == 8633  and   pack_id =='DFLTPCKGSA'  :feeamount = 0.011 * basis
-  elif prod_id == 8633  and   pack_id =='DFLTPACKAGE'  :feeamount = 0.011 * basis
-  elif prod_id == 8800  and   pack_id =='DFLTPCKGSA':feeamount =  basis  *  0.000027
-  elif prod_id == 8801  and   pack_id =='DFLTPACKAGE':feeamount =  basis  *  0.000027
-  elif prod_id == 8801  and   pack_id =='DFLTPCKGSA':feeamount =  basis  *  0.000027
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 + (  (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 + (  (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +  ( (    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +  ( (    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and  ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPCKGSA' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8802  and   pack_id =='DFLTPACKAGE' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +  ( (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +  ( (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and  ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +   ((    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +   ((    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPCKGSA' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8803  and   pack_id =='DFLTPACKAGE' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +  ( (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +  ( (    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +  ( (    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +  ( (    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPCKGSA' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8804  and   pack_id =='DFLTPACKAGE' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis <  5000001 ): feeamount =  50
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis  >=  5000001 )  and   ( basis  <  10000001 ): feeamount =  50 +  ( (    basis  -     5000001 )   *  0.00006)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +   ((    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis  >=  10000001 )  and   ( basis  <  15000001 ): feeamount =  75 +   ((    basis  -     10000001 )   *  0.00003)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +   ((    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis  >=  15000001 )  and   ( basis  <  20000001 ): feeamount =  87.50 +   ((    basis  -     15000001 )   *  0.00001)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis  >=  20000001 )  and   ( basis  <  50000001 ): feeamount =  91.67 +   (( basis  -     20000001 )   *     0.000004)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPCKGSA' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8805  and   pack_id =='DFLTPACKAGE' and ( basis  >=  50000001 ): feeamount =     101.67 +  ( (    basis  -     50000001 )   *     0.0000015)/12
-  elif prod_id == 8806  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  0.25
-  elif prod_id == 8806  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  0.25
-  elif prod_id == 8807  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  0.25
-  elif prod_id == 8807  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  0.25
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  <  500000001 ): feeamount = basis  *  0.00006
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >=  500000001 )  and   ( basis  <  1000000001 ): feeamount =   ( basis  -     500000000 )   *     0.00004  +   (  500000000 *   0.00006 )
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >=  1000000001 )  and   ( basis  < 1500000001 ): feeamount =   ( basis  -     1000000000 )   *     0.00002  +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 )
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >=  1500000001 )  and   ( basis  <  3000000001 ): feeamount =   ( basis  -     1500000000 )   *     0.00001 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 )
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >=  3000000001 )  and   ( basis  <  5000000001 ): feeamount =   ( basis  -     3000000000 )   *     0.000005 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 )
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >=  5000000001 )  and   ( basis  <  7500000001 ): feeamount =   ( basis  -     5000000000 )   *     0.000002 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 ) +   (  2000000000 *   0.000005 )
-  elif prod_id == 8808  and   pack_id =='DFLTPACKAGE' and ( basis  >= 7500000001 ): feeamount = ( basis  -     7500000000 )  *  0.000001  +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 ) +   (  2000000000 *   0.000005 ) +   (  2500000000 *   0.000002 )
-  elif prod_id == 8809  and   pack_id =='DFLTPCKGSA' and ( basis  >=  1 ): feeamount = basis  *  400
-  elif prod_id == 8809  and   pack_id =='DFLTPACKAGE' and ( basis  >=  1 ): feeamount = basis  *  400
-  elif prod_id == 8810  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  0.25
-  elif prod_id == 8810  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  0.25
-  elif prod_id == 8811  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  0.25
-  elif prod_id == 8811  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  0.25
-  elif prod_id == 8812  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  0.25
-  elif prod_id == 8812  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  0.25
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and ( basis  >=  1201 )  and   ( basis  <  5001 ): feeamount =  115 +   (    basis  -     1201 )   *     0.17
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  1201 )  and   ( basis  <  5001 ): feeamount =  115 +   (    basis  -     1201 )   *     0.17
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  5001 )  and   ( basis  <  10001 ): feeamount = 761 +   (    basis  -     5001 )   *     0.14
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  5001 )  and   ( basis  <  10001 ): feeamount = 761 +   (    basis  -     5001 )   *     0.14
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  10001 )  and   ( basis  <  25001 ): feeamount =  1461 +   (    basis  -     10001 )   *     0.12
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and ( basis  >=  10001 )  and   ( basis  <  25001 ): feeamount =  1461 +   (    basis  -     10001 )   *     0.12
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and ( basis  >=  25001 )  and   ( basis  <  50001 ): feeamount =  3261 +   (    basis  -     25001 )   *     0.09
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  25001 )  and   ( basis  <  50001 ): feeamount =  3261 +   (    basis  -     25001 )   *     0.09
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  50001 )  and   ( basis  <  75001 ): feeamount =  5511 +   (    basis  -     50001 )   *     0.07
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  50001 )  and   ( basis  <  75001 ): feeamount =  5511 +   (    basis  -     50001 )   *     0.07
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE'and   ( basis  >=  75001 )  and   ( basis  <  100001 ): feeamount = 7261 +   (    basis  -     75001 )   *     0.06
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  75001 )  and   ( basis  <  100001 ): feeamount = 7261 +   (    basis  -     75001 )   *     0.06
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  100001 )  and   ( basis  <  200001 ): feeamount =  8761 +   (    basis  -     100001 )   *     0.04
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  100001 )  and   ( basis  <  200001 ): feeamount =  8761 +   (    basis  -     100001 )   *     0.04
-  elif prod_id == 8900  and   pack_id =='DFLTPACKAGE' and  basis  >=  200001: feeamount =  12761 +   (    basis  -     200001 )   *     0.01
-  elif prod_id == 8900  and   pack_id =='DFLTPCKGSA' and  basis  >=  200001: feeamount =  12761 +   (    basis  -     200001 )   *     0.01
-  elif prod_id == 8901  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  436 )  and   ( basis  <=  5000 ): feeamount =   (    basis  -     435 )   *  0.22
-  elif prod_id == 8901  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  5001 )  and   ( basis  <=  10000 ): feeamount    =   ( basis  -     5000 )   *     0.19 +   (  4565 *   0.22 )
-  elif prod_id == 8901  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  10001 )  and   ( basis  <=  25000 ): feeamount =   (    basis  -     10000 )   *     0.16 +   (  4565 *   0.22 ) +   (  5000 *   0.19 )
-  elif prod_id == 8901  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  25001 )  and   ( basis  <=  100000 ): feeamount =   (    basis  -  25000 )   *    0.08 +   (  4565 *   0.22 ) +   (  5000 *   0.19 ) +   (  15000 *   0.16 )
-  elif prod_id == 8901  and   pack_id =='DFLTPACKAGE' and  ( basis  >  100000 ): feeamount =   ( basis  -  100000 )   *     0.07 +   (  4565 *   0.22 ) +   (  5000 *   0.19 ) +   (  15000 *   0.16 ) +   (  75000 *   0.09 )
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA' and  (basis > 0 and basis  <  436 ): feeamount =   50
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  436 )  and   ( basis  <  5001 ): feeamount =  50 +  (    basis  -     435 )   *  0.31
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  5001 )  and   ( basis  <  10001 ): feeamount   = 50 +  ( basis  -     5000 )   *     0.29 +   (  4565 *   0.31 )
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  10001 )  and   ( basis  <  25001 ): feeamount = 50 +  (    basis  -     10000 )   *     0.26 +   (  4565 *   0.31 ) +   (  5000 *   0.29 )
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  25001 )  and   ( basis  <  50001 ): feeamount = 50 +  (    basis  -     25000 )   *     0.14 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 )
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  50001 )  and   ( basis  <  100001 ): feeamount =  50 +  (    basis  -     50000 )   *     0.08 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 ) +   (  25000 *   0.14 )
-  elif prod_id == 8902  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  100001 ): feeamount = 50 +  (    basis  -     100000 )   *     0.07 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 ) +   (  25000 *   0.14 ) +   (  50000 *   0.08 )
-  elif prod_id == 8903  and   pack_id =='DFLTPCKGSA': feeamount = basis  * 7
-  elif prod_id == 8903  and   pack_id =='DFLTPACKAGE': feeamount = basis  * 7
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  101 )  and   ( basis  <  1201 ): feeamount =  115 +   ( basis  -  101 )   *  0.19
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE' and ( basis  >=  101 )  and   ( basis  <  1201 ): feeamount =  115 +   ( basis  -  101 )   *  0.19
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >= 1201 )  and   ( basis  <  5001 ): feeamount = 324 +   ( basis  -  1201 )   *  0.11
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE'and  ( basis  >= 1201 )  and   ( basis  <  5001 ): feeamount = 324 +   ( basis  -  1201 )   *  0.11
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >= 5001 )  and   ( basis  <  10001 ): feeamount = 742 +   ( basis  -  5001 )   *  0.14
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE' and  ( basis  >= 5001 )  and   ( basis  <  10001 ): feeamount = 742 +   ( basis  -  5001 )   *  0.14
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >=10001 )  and   ( basis  <25001 ): feeamount =  1442 +   ( basis  -  10001 )   *  0.12
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE' and ( basis  >=10001 )  and   ( basis  <25001 ): feeamount =  1442 +   ( basis  -  10001 )   *  0.12
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE' and ( basis  >=25001 )  and   ( basis  <  50001 ): feeamount =  3242 +   ( basis  -  25001 )   *  0.09
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >=25001 )  and   ( basis  <  50001 ): feeamount =  3242 +   ( basis  -  25001 )   *  0.09
-  elif prod_id == 8904  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  50001 ): feeamount =  5492 +   ( basis  -  50001 )   *  0.07
-  elif prod_id == 8904  and   pack_id =='DFLTPACKAGE' and ( basis  >=  50001 ): feeamount =  5492 +   ( basis  -  50001 )   *  0.07
-  elif prod_id == 9303  and   pack_id =='DFLTPACKAGE':feeamount =  0.18  * basis
-  elif prod_id == 9303  and   pack_id =='DFLTPCKGSA':feeamount =  0.18  * basis
-  elif prod_id == 9306  and   pack_id =='DFLTPCKGSA'  and ( basis  <  5000000001 ): feeamount = basis  *     0.00015
-  elif prod_id == 9306  and   pack_id =='DFLTPACKAGE' and  ( basis  <  5000000001 ): feeamount = basis  *     0.00015
-  elif prod_id == 9306  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  10000000001 ): feeamount =   (    basis  -  10000000000 )   *      0.0001 +   (  5000000000 *   0.00015 ) +   (  5000000000 *   0.00012 )
-  elif prod_id == 9306  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  10000000001 ): feeamount =   (    basis  -  10000000000 )   *     0.0001 +   (  5000000000 *   0.00015 ) +   (  5000000000 *   0.00012 )
-  elif prod_id == 9306  and   pack_id =='DFLTPACKAGE' and  ( basis  >=  5000000001 ) and  ( basis  <  10000000001 ): feeamount =   ( basis  -     5000000000 )   *     0.00012 +   (  5000000000 *   0.00015 )
-  elif prod_id == 9306  and   pack_id =='DFLTPCKGSA'  and ( basis  >=  5000000001 ) and  ( basis  <  10000000001 ): feeamount =   ( basis  -     5000000000 )   *     0.00012 +   (  5000000000 *   0.00015 )
-  elif prod_id == 9307  and   pack_id =='DFLTPCKGSA'  and ( basis  >  0 ): feeamount = basis  *     0.018
-  elif prod_id == 9307  and   pack_id =='DFLTPACKAGE' and  ( basis  >  0 ): feeamount = basis  *     0.018
-  elif prod_id == 9309  and   pack_id =='DFLTPCKGSA':feeamount =  0.18  * basis
-  elif prod_id == 9309  and   pack_id =='DFLTPACKAGE':feeamount =  0.18  * basis
-  elif prod_id == 9402  and   pack_id =='DFLTPACKAGE':feeamount =  basis * 0.42
-  elif prod_id == 9402  and   pack_id =='DFLTPCKGSA':feeamount =  basis * 0.42
-  elif prod_id == 9404  and   pack_id =='DFLTPCKGSA':feeamount =  basis * 0.42
-  elif prod_id == 9404  and   pack_id =='DFLTPACKAGE':feeamount =  basis * 0.42
-  elif prod_id == 9406  and   pack_id =='DFLTPCKGSA':feeamount =   basis *  0.08
-  elif prod_id == 9406  and   pack_id =='DFLTPACKAGE':feeamount =   basis *  0.08
-  elif prod_id == 9413  and   pack_id =='DFLTPACKAGE' : feeamount =     0.5 * basis
-  elif prod_id == 9413  and   pack_id =='DFLTPCKGSA' : feeamount =     0.5 * basis
-  elif prod_id == 9415  and   pack_id =='DFLTPCKGSA': feeamount =     0.5 * basis
-  elif prod_id == 9415  and   pack_id =='DFLTPACKAGE': feeamount =     0.5 * basis
-  elif prod_id == 9424  and   pack_id =='DFLTPACKAGE':feeamount = 0.50 * basis
-  elif prod_id == 9424  and   pack_id =='DFLTPCKGSA':feeamount = 0.50 * basis
-  elif prod_id == 9429  and   pack_id =='DFLTPACKAGE':feeamount =   basis *  0.60
-  elif prod_id == 9429  and   pack_id =='DFLTPCKGSA':feeamount =   basis *  0.60
-  elif prod_id == 9443  and   pack_id =='DFLTPCKGSA':feeamount =  basis * 2.50
-  elif prod_id == 9443  and   pack_id =='DFLTPACKAGE':feeamount =  basis * 2.50
-  elif prod_id == 9502  and   pack_id =='DFLTPCKGSA':feeamount =  basis * 0.42
-  elif prod_id == 9502  and   pack_id =='DFLTPACKAGE':feeamount =  basis * 0.42
-  elif prod_id == 9504  and   pack_id =='DFLTPCKGSA':feeamount =  basis * 0.42
-  elif prod_id == 9504  and   pack_id =='DFLTPACKAGE':feeamount =  basis * 0.42
-  elif prod_id == 9506  and   pack_id =='DFLTPACKAGE':feeamount =   basis *  0.08
-  elif prod_id == 9506  and   pack_id =='DFLTPCKGSA':feeamount =   basis *  0.08
-  elif prod_id == 9513  and   pack_id =='DFLTPACKAGE' : feeamount =     0.5 * basis
-  elif prod_id == 9513  and   pack_id =='DFLTPCKGSA' : feeamount =     0.5 * basis
-  elif prod_id == 9515  and   pack_id =='DFLTPACKAGE': feeamount =     0.5 * basis
-  elif prod_id == 9515  and   pack_id =='DFLTPCKGSA': feeamount =     0.5 * basis
-  elif prod_id == 9520  and   pack_id =='DFLTPACKAGE':feeamount = basis * 0.07
-  elif prod_id == 9520  and   pack_id =='DFLTPCKGSA':feeamount = basis * 0.07
-  elif prod_id == 9521  and   pack_id =='DFLTPCKGSA':feeamount = basis  *  0.07
-  elif prod_id == 9521  and   pack_id =='DFLTPACKAGE':feeamount = basis  *  0.07
-  elif prod_id == 9524  and   pack_id =='DFLTPCKGSA':feeamount = 0.50 * basis
-  elif prod_id == 9524  and   pack_id =='DFLTPACKAGE':feeamount = 0.50 * basis
-  elif prod_id == 9529  and   pack_id =='DFLTPACKAGE':feeamount =   basis *  0.60
-  elif prod_id == 9529  and   pack_id =='DFLTPCKGSA':feeamount =   basis *  0.60
-  elif prod_id == 9543  and   pack_id =='DFLTPCKGSA':feeamount =   basis  *  2.50
-  elif prod_id == 9543  and   pack_id =='DFLTPACKAGE':feeamount =   basis  *  2.50
-  elif prod_id == 9547  and   pack_id =='DFLTPACKAGE':feeamount = basis  *  0.07
-  elif prod_id == 9547  and   pack_id =='DFLTPCKGSA':feeamount = basis  *  0.07     
+  elif BillID==8101 and pack_id=='PCKG' and (Quantity > 20):
+          feeamount = (Quantity-20)*110 
+  elif BillID == 8101  and   pack_id =='PCK' and ( Quantity  >  20 ): feeamount =    Quantity   *  110
+  elif BillID == 8101  and   pack_id =='PCKG'and ( Quantity  >  20 ): feeamount =   Quantity   *  110
+  elif BillID == 8102  and   pack_id =='PCKG'  :  feeamount =  2500
+  elif BillID == 8102  and   pack_id =='PCK'  :  feeamount =  2500
+  elif BillID == 8103  and   pack_id =='PCKG'  : feeamount =     500
+  elif BillID == 8103  and   pack_id =='PCK'  : feeamount =     500
+  elif BillID == 8104  and   pack_id =='PCK'  :  feeamount =  150
+  elif BillID == 8104  and   pack_id =='PCKG'  :  feeamount =  150
+  elif BillID == 8105  and   pack_id =='PCKG'  :feeamount = 300
+  elif BillID == 8105  and   pack_id =='PCK'  :feeamount = 300
+  elif BillID == 8239  and   pack_id =='PCK' and ( Quantity  >  250 )  and   ( Quantity  <=  1000 ): feeamount =   (    Quantity  -     250 )   *  0.6
+  elif BillID == 8239  and   pack_id =='PCKG' and( Quantity  >  250 )  and   ( Quantity  <=  1000 ): feeamount =   (    Quantity  -     250 )   *  0.6
+  elif BillID == 8239  and   pack_id =='PCKG'  and   ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ): feeamount =   ( Quantity  -  1000 )   *  0.48 +   (  750 *  0.6 )
+  elif BillID == 8239  and   pack_id =='PCK'  and   ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ): feeamount =   ( Quantity  -  1000 )   *  0.48 +   (  750 *  0.6 )
+  elif BillID == 8239  and   pack_id =='PCK'  and   ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ): feeamount =   (    Quantity  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
+  elif BillID == 8239  and   pack_id =='PCKG'  and   ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ): feeamount =   (    Quantity  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
+  elif BillID == 8239  and   pack_id =='PCKG'  and   ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ): feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
+  elif BillID == 8239  and   pack_id =='PCK'  and   ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ): feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
+  elif BillID == 8239  and   pack_id =='PCKG'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ): feeamount =   (    Quantity  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
+  elif BillID == 8239  and   pack_id =='PCK'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ): feeamount =   (    Quantity  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
+  elif BillID == 8239  and   pack_id =='PCK'  and   ( Quantity  >  50000 ): feeamount =   (    Quantity  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
+  elif BillID == 8239  and   pack_id =='PCKG'  and   ( Quantity  >  50000 ): feeamount =   (    Quantity  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  250 )  and   ( Quantity  <=  1000 ): feeamount =   (    Quantity  -     250 )   *  0.6
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  250 )  and   ( Quantity  <=  1000 ): feeamount =   (    Quantity  -     250 )   *  0.6
+  elif BillID == 8240  and   pack_id =='PCKG'  :feeamount =   Quantity  *  0.58
+  elif BillID == 8240  and   pack_id =='PCK'  :feeamount =   Quantity  *  0.58
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ): feeamount =   ( Quantity  -  1000 )   *  0.48 +   (  750 *  0.6 )
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  1000 )  and   ( Quantity  <=  5000 ): feeamount =   ( Quantity  -  1000 )   *  0.48 +   (  750 *  0.6 )
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ): feeamount =   (    Quantity  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  5000 )  and   ( Quantity  <=  10000 ): feeamount =   (    Quantity  -     5000 )   *  0.36 +   (     750 *  0.6 )   +   (  4000 *  0.48 )
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ): feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  10000 )  and   ( Quantity  <=  25000 ): feeamount =   (    Quantity  -     10000 )   *  0.30 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 )
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ): feeamount =   (    Quantity  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  50000 ): feeamount =   (    Quantity  -     25000 )   *  0.24 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 )
+  elif BillID == 8240  and   pack_id =='PCK'  and   ( Quantity  >  50000 ): feeamount =   (    Quantity  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
+  elif BillID == 8240  and   pack_id =='PCKG'  and   ( Quantity  >  50000 ): feeamount =   (    Quantity  -     50000 )   *  0.06 +   (     750 *  0.6 )   +   (  4000 *  0.48 )  +   (  5000 *  0.36 ) +   (  15000 *  0.30 ) +   (  25000 *  0.24 )
+  elif BillID == 8241  and   pack_id =='PCK': feeamount =    200
+  elif BillID == 8241  and   pack_id =='PCKG': feeamount =    200
+  elif BillID == 8300  and   pack_id =='PCKG'  and   ( Quantity  >  0 )  and   ( Quantity  <=  25000): feeamount =   (    Quantity  )   *  0.07
+  elif BillID == 8300  and   pack_id =='PCK'  and   ( Quantity  >  0 )  and   ( Quantity  <=  25000): feeamount =   (Quantity)   *  0.07
+  elif BillID == 8300  and   pack_id =='PCKG'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  100000): feeamount =   (Quantity-25000)   *  0.05 + (  25000 *  0.07 )
+  elif BillID == 8300  and   pack_id =='PCK'  and   ( Quantity  >  25000 )  and   ( Quantity  <=  100000): feeamount =   (Quantity-25000)   *  0.05 + (  25000 *  0.07 )
+  elif BillID == 8300  and   pack_id =='PCKG'  and   ( Quantity  >  100000 )  and   ( Quantity  <=  400000): feeamount =   (Quantity-100000)   *  0.03 + (  75000 *  0.05 ) + (  25000 *  0.07 )
+  elif BillID == 8300  and   pack_id =='PCK'  and   ( Quantity  >  100000 )  and   ( Quantity  <=  400000): feeamount =   (Quantity-100000)   *  0.03 + (  75000 *  0.05 ) + (  25000 *  0.07 )
+  elif BillID == 8300  and   pack_id =='PCKG'  and   ( Quantity  >  400000 )  : feeamount =   (Quantity-400000)   *  0.015 + (  300000 *  0.03 ) + (  75000 *  0.05 ) + (  25000 *  0.07 )
+  elif BillID == 8300  and   pack_id =='PCK'  and   ( Quantity  >  400000 )  : feeamount =   (Quantity-400000)   *  0.015 + (  300000 *  0.03 ) + (  75000 *  0.05 ) + (  25000 *  0.07 )
+  elif BillID == 8302  and   pack_id =='PCK'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.000041
+  elif BillID == 8302  and   pack_id =='PCKG'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.000041
+  elif BillID == 8302  and   pack_id =='PCK'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.000041
+  elif BillID == 8302  and   pack_id =='PCKG'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.000041
+  elif BillID == 8303  and   pack_id =='PCKG':feeamount =  0.18  * Quantity
+  elif BillID == 8303  and   pack_id =='PCK':feeamount =  0.18  * Quantity
+  elif BillID == 8304  and   pack_id =='PCKG'     : feeamount =    Quantity  *  40
+  elif BillID == 8304  and   pack_id =='PCK'     : feeamount =    Quantity  *  40
+  elif BillID == 8306  and   pack_id =='PCKG'  and   ( Quantity  <  5000000001 ): feeamount = Quantity  *     0.000024
+  elif BillID == 8306  and   pack_id =='PCK'  and   ( Quantity  <  5000000001 ): feeamount = Quantity  *     0.000024
+  elif BillID == 8306  and   pack_id =='PCKG'  and   ( Quantity  >=  5000000001 )  and   ( Quantity  <  10000000001 ): feeamount =   (    Quantity  -     5000000000 )   *     0.00002   +   (  5000000000 *  0.000024 )
+  elif BillID == 8306  and   pack_id =='PCK'  and   ( Quantity  >=  5000000001 )  and   ( Quantity  <  10000000001 ): feeamount =   (    Quantity  -     5000000000 )   *     0.00002   +   (  5000000000 *  0.000024 )
+  elif BillID == 8306  and   pack_id =='PCKG'  and   ( Quantity  >=  10000000001 )  and   ( Quantity  <  40000000001 ): feeamount =   ( Quantity  -     10000000000 )   *  0.000016  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 )
+  elif BillID == 8306  and   pack_id =='PCK'  and   ( Quantity  >=  10000000001 )  and   ( Quantity  <  40000000001 ): feeamount =   ( Quantity  -     10000000000 )   *  0.000016  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 )
+  elif BillID == 8306  and   pack_id =='PCKG'  and   ( Quantity  >=  40000000001 ): feeamount =   (    Quantity  -     40000000000 )   *     0.000012  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 ) +   (  30000000000 *  0.000016 )
+  elif BillID == 8306  and   pack_id =='PCK'  and   ( Quantity  >=  40000000001 ): feeamount =   (    Quantity  -     40000000000 )   *     0.000012  +   (  5000000000 *  0.000024 )  +   (  5000000000 *  0.00002 ) +   (  30000000000 *  0.000016 )
+  elif BillID == 8307  and   pack_id =='PCK'  and   ( Quantity  >  0 ): feeamount = Quantity  *     0.018
+  elif BillID == 8307  and   pack_id =='PCKG'  and   ( Quantity  >  0 ): feeamount = Quantity  *     0.018
+  elif BillID == 8308  and   pack_id =='PCKG' and( Quantity  >  0 ): feeamount = Quantity  *  25
+  elif BillID == 8308  and   pack_id =='PCK' and ( Quantity  >  0 ): feeamount = Quantity  *  25
+  elif BillID == 8309  and   pack_id =='PCKG' :feeamount =  0.18  * Quantity
+  elif BillID == 8309  and   pack_id =='PCK' :feeamount =  0.18  * Quantity
+  elif BillID == 8310  and   pack_id =='PCK'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.0000024
+  elif BillID == 8310  and   pack_id =='PCKG'  and   ( Quantity  >  0 ): feeamount = Quantity  *  0.0000024
+  elif BillID == 8402  and   pack_id =='PCKG'  :feeamount =  Quantity * 0.42
+  elif BillID == 8402  and   pack_id =='PCK'  :feeamount =  Quantity * 0.42
+  elif BillID == 8404  and   pack_id =='PCKG'  :feeamount =  Quantity * 0.42
+  elif BillID == 8404  and   pack_id =='PCK'  :feeamount =  Quantity * 0.42
+  elif BillID == 8406  and   pack_id =='PCKG'  :feeamount =   Quantity *  0.06
+  elif BillID == 8406  and   pack_id =='PCK'  :feeamount =   Quantity *  0.06
+  elif BillID == 8413  and   pack_id =='PCK'     : feeamount =     0.5 * Quantity
+  elif BillID == 8413  and   pack_id =='PCKG'     : feeamount =     0.5 * Quantity
+  elif BillID == 8415  and   pack_id =='PCK'  : feeamount =     0.5 * Quantity
+  elif BillID == 8415  and   pack_id =='PCKG'  : feeamount =     0.5 * Quantity
+  elif BillID == 8424  and   pack_id =='PCKG'  :feeamount = 0.50 * Quantity
+  elif BillID == 8424  and   pack_id =='PCK'  :feeamount = 0.50 * Quantity
+  elif BillID == 8429  and   pack_id =='PCKG'  :feeamount =   Quantity *  0.60
+  elif BillID == 8429  and   pack_id =='PCK'  :feeamount =   Quantity *  0.60
+  elif BillID == 8446  and   pack_id =='PCKG'  :feeamount =  0.024 * Quantity
+  elif BillID == 8446  and   pack_id =='PCK'  :feeamount =  0.024 * Quantity
+  elif BillID == 8502  and   pack_id =='PCK'  :feeamount =  Quantity * 0.42
+  elif BillID == 8502  and   pack_id =='PCKG'  :feeamount =  Quantity * 0.42
+  elif BillID == 8504  and   pack_id =='PCK'  :feeamount =  Quantity * 0.42
+  elif BillID == 8504  and   pack_id =='PCKG'  :feeamount =  Quantity * 0.42
+  elif BillID == 8506  and   pack_id =='PCK'  :feeamount =   Quantity *  0.08
+  elif BillID == 8506  and   pack_id =='PCKG'  :feeamount =   Quantity *  0.08
+  elif BillID == 8513  and   pack_id =='PCK'     : feeamount =     0.5 * Quantity
+  elif BillID == 8513  and   pack_id =='PCKG'     : feeamount =     0.5 * Quantity
+  elif BillID == 8515  and   pack_id =='PCK'  : feeamount =     0.5 * Quantity
+  elif BillID == 8515  and   pack_id =='PCKG'  : feeamount =     0.5 * Quantity
+  elif BillID == 8520  and   pack_id =='PCK'  :feeamount = Quantity * 0.07
+  elif BillID == 8520  and   pack_id =='PCKG'  :feeamount = Quantity * 0.07
+  elif BillID == 8521  and   pack_id =='PCK'  :feeamount =  Quantity  *  0.6
+  elif BillID == 8521  and   pack_id =='PCKG'  :feeamount =  Quantity  *  0.6
+  elif BillID == 8524  and   pack_id =='PCK'  :feeamount = 0.50 * Quantity
+  elif BillID == 8524  and   pack_id =='PCKG'  :feeamount = 0.50 * Quantity
+  elif BillID == 8529  and   pack_id =='PCK'  :feeamount =   Quantity *  0.60
+  elif BillID == 8529  and   pack_id =='PCKG'  :feeamount =   Quantity *  0.60
+  elif BillID == 8531  and   pack_id =='PCK'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8531  and   pack_id =='PCKG'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8532  and   pack_id =='PCK'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8532  and   pack_id =='PCKG'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8533  and   pack_id =='PCK'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8533  and   pack_id =='PCKG'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8534  and   pack_id =='PCKG'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8534  and   pack_id =='PCK'  :  feeamount =     0.25 * Quantity
+  elif BillID == 8538  and   pack_id =='PCK'  :feeamount = Quantity * 2.50  
+  elif BillID == 8538  and   pack_id =='PCKG'  :feeamount = Quantity * 2.50
+  elif BillID == 8539  and   pack_id =='PCKG'  :feeamount = Quantity * 2.50
+  elif BillID == 8539  and   pack_id =='PCK'  :feeamount = Quantity * 2.50
+  elif BillID == 8540  and   pack_id =='PCK'  :feeamount = Quantity * 2.50
+  elif BillID == 8540  and   pack_id =='PCKG'  :feeamount = Quantity * 2.50
+  elif BillID == 8541  and   pack_id =='PCK'  :feeamount = Quantity * 2.50
+  elif BillID == 8541  and   pack_id =='PCKG'  :feeamount = Quantity * 2.50
+  elif BillID == 8546  and   pack_id =='PCK'  :feeamount =  0.024 * Quantity
+  elif BillID == 8546  and   pack_id =='PCKG'  :feeamount =  0.024 * Quantity
+  elif BillID == 8547  and   pack_id =='PCK'  :feeamount = Quantity  *  0.07
+  elif BillID == 8547  and   pack_id =='PCKG'  :feeamount = Quantity  *  0.07
+  elif BillID == 8600  and   pack_id =='PCKG'  : feeamount = Quantity  *     0.5
+  elif BillID == 8600  and   pack_id =='PCK'  : feeamount = Quantity  *     0.5
+  elif BillID == 8601  and   pack_id =='PCK'  : feeamount = Quantity  *     2.5
+  elif BillID == 8601  and   pack_id =='PCKG'  : feeamount = Quantity  *     2.5
+  elif BillID == 8602  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8602  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8604  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8604  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8605  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8605  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8606  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8606  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8607  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8607  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8608  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8608  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8609  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8609  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8611  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8611  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8612  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8612  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8613  and   pack_id =='PCKG'  :feeamount =  0.049 * Quantity
+  elif BillID == 8613  and   pack_id =='PCK'  :feeamount =  0.049 * Quantity
+  elif BillID == 8618  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8618  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8623  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8623  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8624  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8624  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8628  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8628  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8629  and   pack_id =='PCKG'  :feeamount = 0.049 * Quantity
+  elif BillID == 8629  and   pack_id =='PCK'  :feeamount = 0.049 * Quantity
+  elif BillID == 8630  and   pack_id =='PCKG'  :feeamount = 0.011 * Quantity
+  elif BillID == 8630  and   pack_id =='PCK'  :feeamount = 0.011 * Quantity
+  elif BillID == 8631  and   pack_id =='PCK'  :feeamount = 0.011 * Quantity
+  elif BillID == 8631  and   pack_id =='PCKG'  :feeamount = 0.011 * Quantity
+  elif BillID == 8632  and   pack_id =='PCK'  :feeamount = 0.011 * Quantity
+  elif BillID == 8632  and   pack_id =='PCKG'  :feeamount = 0.011 * Quantity
+  elif BillID == 8633  and   pack_id =='PCK'  :feeamount = 0.011 * Quantity
+  elif BillID == 8633  and   pack_id =='PCKG'  :feeamount = 0.011 * Quantity
+  elif BillID == 8800  and   pack_id =='PCK':feeamount =  Quantity  *  0.000027
+  elif BillID == 8801  and   pack_id =='PCKG':feeamount =  Quantity  *  0.000027
+  elif BillID == 8801  and   pack_id =='PCK':feeamount =  Quantity  *  0.000027
+  elif BillID == 8802  and   pack_id =='PCKG' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8802  and   pack_id =='PCK' and( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8802  and   pack_id =='PCKG' and( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8802  and   pack_id =='PCK' and( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8802  and   pack_id =='PCK' and( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 + (  (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8802  and   pack_id =='PCKG' and( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 + (  (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8802  and   pack_id =='PCKG' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +  ( (    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8802  and   pack_id =='PCK' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +  ( (    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8802  and   pack_id =='PCK' and  ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8802  and   pack_id =='PCKG' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8802  and   pack_id =='PCK' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8802  and   pack_id =='PCKG' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8803  and   pack_id =='PCK' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8803  and   pack_id =='PCK' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and  ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +  ( (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8803  and   pack_id =='PCK' and ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +  ( (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8803  and   pack_id =='PCK' and  ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +   ((    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +   ((    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8803  and   pack_id =='PCK' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8803  and   pack_id =='PCK' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8803  and   pack_id =='PCKG' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and  ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +  ( (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +  ( (    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +  ( (    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +  ( (    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8804  and   pack_id =='PCK' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8804  and   pack_id =='PCKG' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity <  5000001 ): feeamount =  50
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity  >=  5000001 )  and   ( Quantity  <  10000001 ): feeamount =  50 +  ( (    Quantity  -     5000001 )   *  0.00006)/12
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +   ((    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity  >=  10000001 )  and   ( Quantity  <  15000001 ): feeamount =  75 +   ((    Quantity  -     10000001 )   *  0.00003)/12
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +   ((    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity  >=  15000001 )  and   ( Quantity  <  20000001 ): feeamount =  87.50 +   ((    Quantity  -     15000001 )   *  0.00001)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity  >=  20000001 )  and   ( Quantity  <  50000001 ): feeamount =  91.67 +   (( Quantity  -     20000001 )   *     0.000004)/12
+  elif BillID == 8805  and   pack_id =='PCK' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8805  and   pack_id =='PCKG' and ( Quantity  >=  50000001 ): feeamount =     101.67 +  ( (    Quantity  -     50000001 )   *     0.0000015)/12
+  elif BillID == 8806  and   pack_id =='PCKG':feeamount =   Quantity  *  0.25
+  elif BillID == 8806  and   pack_id =='PCK':feeamount =   Quantity  *  0.25
+  elif BillID == 8807  and   pack_id =='PCK':feeamount =   Quantity  *  0.25
+  elif BillID == 8807  and   pack_id =='PCKG':feeamount =   Quantity  *  0.25
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  <  500000001 ): feeamount = Quantity  *  0.00006
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >=  500000001 )  and   ( Quantity  <  1000000001 ): feeamount =   ( Quantity  -     500000000 )   *     0.00004  +   (  500000000 *   0.00006 )
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >=  1000000001 )  and   ( Quantity  < 1500000001 ): feeamount =   ( Quantity  -     1000000000 )   *     0.00002  +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 )
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >=  1500000001 )  and   ( Quantity  <  3000000001 ): feeamount =   ( Quantity  -     1500000000 )   *     0.00001 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 )
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >=  3000000001 )  and   ( Quantity  <  5000000001 ): feeamount =   ( Quantity  -     3000000000 )   *     0.000005 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 )
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >=  5000000001 )  and   ( Quantity  <  7500000001 ): feeamount =   ( Quantity  -     5000000000 )   *     0.000002 +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 ) +   (  2000000000 *   0.000005 )
+  elif BillID == 8808  and   pack_id =='PCKG' and ( Quantity  >= 7500000001 ): feeamount = ( Quantity  -     7500000000 )  *  0.000001  +   (  500000000 *   0.00006 )  +   (  500000000 *   0.00004 ) +   (  500000000 *   0.00002 ) +   (  1500000000 *   0.00001 ) +   (  2000000000 *   0.000005 ) +   (  2500000000 *   0.000002 )
+  elif BillID == 8809  and   pack_id =='PCK' and ( Quantity  >=  1 ): feeamount = Quantity  *  400
+  elif BillID == 8809  and   pack_id =='PCKG' and ( Quantity  >=  1 ): feeamount = Quantity  *  400
+  elif BillID == 8810  and   pack_id =='PCK':feeamount =   Quantity  *  0.25
+  elif BillID == 8810  and   pack_id =='PCKG':feeamount =   Quantity  *  0.25
+  elif BillID == 8811  and   pack_id =='PCKG':feeamount =   Quantity  *  0.25
+  elif BillID == 8811  and   pack_id =='PCK':feeamount =   Quantity  *  0.25
+  elif BillID == 8812  and   pack_id =='PCKG':feeamount =   Quantity  *  0.25
+  elif BillID == 8812  and   pack_id =='PCK':feeamount =   Quantity  *  0.25
+  elif BillID == 8900  and   pack_id =='PCKG' and ( Quantity  >=  1201 )  and   ( Quantity  <  5001 ): feeamount =  115 +   (    Quantity  -     1201 )   *     0.17
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  1201 )  and   ( Quantity  <  5001 ): feeamount =  115 +   (    Quantity  -     1201 )   *     0.17
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  5001 )  and   ( Quantity  <  10001 ): feeamount = 761 +   (    Quantity  -     5001 )   *     0.14
+  elif BillID == 8900  and   pack_id =='PCKG' and  ( Quantity  >=  5001 )  and   ( Quantity  <  10001 ): feeamount = 761 +   (    Quantity  -     5001 )   *     0.14
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  10001 )  and   ( Quantity  <  25001 ): feeamount =  1461 +   (    Quantity  -     10001 )   *     0.12
+  elif BillID == 8900  and   pack_id =='PCKG' and ( Quantity  >=  10001 )  and   ( Quantity  <  25001 ): feeamount =  1461 +   (    Quantity  -     10001 )   *     0.12
+  elif BillID == 8900  and   pack_id =='PCKG' and ( Quantity  >=  25001 )  and   ( Quantity  <  50001 ): feeamount =  3261 +   (    Quantity  -     25001 )   *     0.09
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  25001 )  and   ( Quantity  <  50001 ): feeamount =  3261 +   (    Quantity  -     25001 )   *     0.09
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  50001 )  and   ( Quantity  <  75001 ): feeamount =  5511 +   (    Quantity  -     50001 )   *     0.07
+  elif BillID == 8900  and   pack_id =='PCKG' and  ( Quantity  >=  50001 )  and   ( Quantity  <  75001 ): feeamount =  5511 +   (    Quantity  -     50001 )   *     0.07
+  elif BillID == 8900  and   pack_id =='PCKG'and   ( Quantity  >=  75001 )  and   ( Quantity  <  100001 ): feeamount = 7261 +   (    Quantity  -     75001 )   *     0.06
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  75001 )  and   ( Quantity  <  100001 ): feeamount = 7261 +   (    Quantity  -     75001 )   *     0.06
+  elif BillID == 8900  and   pack_id =='PCK'  and ( Quantity  >=  100001 )  and   ( Quantity  <  200001 ): feeamount =  8761 +   (    Quantity  -     100001 )   *     0.04
+  elif BillID == 8900  and   pack_id =='PCKG' and  ( Quantity  >=  100001 )  and   ( Quantity  <  200001 ): feeamount =  8761 +   (    Quantity  -     100001 )   *     0.04
+  elif BillID == 8900  and   pack_id =='PCKG' and  Quantity  >=  200001: feeamount =  12761 +   (    Quantity  -     200001 )   *     0.01
+  elif BillID == 8900  and   pack_id =='PCK' and  Quantity  >=  200001: feeamount =  12761 +   (    Quantity  -     200001 )   *     0.01
+  elif BillID == 8901  and   pack_id =='PCKG' and  ( Quantity  >=  436 )  and   ( Quantity  <=  5000 ): feeamount =   (    Quantity  -     435 )   *  0.22
+  elif BillID == 8901  and   pack_id =='PCKG' and  ( Quantity  >=  5001 )  and   ( Quantity  <=  10000 ): feeamount    =   ( Quantity  -     5000 )   *     0.19 +   (  4565 *   0.22 )
+  elif BillID == 8901  and   pack_id =='PCKG' and  ( Quantity  >=  10001 )  and   ( Quantity  <=  25000 ): feeamount =   (    Quantity  -     10000 )   *     0.16 +   (  4565 *   0.22 ) +   (  5000 *   0.19 )
+  elif BillID == 8901  and   pack_id =='PCKG' and  ( Quantity  >=  25001 )  and   ( Quantity  <=  100000 ): feeamount =   (    Quantity  -  25000 )   *    0.08 +   (  4565 *   0.22 ) +   (  5000 *   0.19 ) +   (  15000 *   0.16 )
+  elif BillID == 8901  and   pack_id =='PCKG' and  ( Quantity  >  100000 ): feeamount =   ( Quantity  -  100000 )   *     0.07 +   (  4565 *   0.22 ) +   (  5000 *   0.19 ) +   (  15000 *   0.16 ) +   (  75000 *   0.09 )
+  elif BillID == 8902  and   pack_id =='PCK' and  (Quantity > 0 and Quantity  <  436 ): feeamount =   50
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  436 )  and   ( Quantity  <  5001 ): feeamount =  50 +  (    Quantity  -     435 )   *  0.31
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  5001 )  and   ( Quantity  <  10001 ): feeamount   = 50 +  ( Quantity  -     5000 )   *     0.29 +   (  4565 *   0.31 )
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  10001 )  and   ( Quantity  <  25001 ): feeamount = 50 +  (    Quantity  -     10000 )   *     0.26 +   (  4565 *   0.31 ) +   (  5000 *   0.29 )
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  25001 )  and   ( Quantity  <  50001 ): feeamount = 50 +  (    Quantity  -     25000 )   *     0.14 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 )
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  50001 )  and   ( Quantity  <  100001 ): feeamount =  50 +  (    Quantity  -     50000 )   *     0.08 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 ) +   (  25000 *   0.14 )
+  elif BillID == 8902  and   pack_id =='PCK'  and ( Quantity  >=  100001 ): feeamount = 50 +  (    Quantity  -     100000 )   *     0.07 +   (  4565 *   0.31 ) +   (  5000 *   0.29 ) +   (  15000 *   0.26 ) +   (  25000 *   0.14 ) +   (  50000 *   0.08 )
+  elif BillID == 8903  and   pack_id =='PCK': feeamount = Quantity  * 7
+  elif BillID == 8903  and   pack_id =='PCKG': feeamount = Quantity  * 7
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >=  101 )  and   ( Quantity  <  1201 ): feeamount =  115 +   ( Quantity  -  101 )   *  0.19
+  elif BillID == 8904  and   pack_id =='PCKG' and ( Quantity  >=  101 )  and   ( Quantity  <  1201 ): feeamount =  115 +   ( Quantity  -  101 )   *  0.19
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >= 1201 )  and   ( Quantity  <  5001 ): feeamount = 324 +   ( Quantity  -  1201 )   *  0.11
+  elif BillID == 8904  and   pack_id =='PCKG'and  ( Quantity  >= 1201 )  and   ( Quantity  <  5001 ): feeamount = 324 +   ( Quantity  -  1201 )   *  0.11
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >= 5001 )  and   ( Quantity  <  10001 ): feeamount = 742 +   ( Quantity  -  5001 )   *  0.14
+  elif BillID == 8904  and   pack_id =='PCKG' and  ( Quantity  >= 5001 )  and   ( Quantity  <  10001 ): feeamount = 742 +   ( Quantity  -  5001 )   *  0.14
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >=10001 )  and   ( Quantity  <25001 ): feeamount =  1442 +   ( Quantity  -  10001 )   *  0.12
+  elif BillID == 8904  and   pack_id =='PCKG' and ( Quantity  >=10001 )  and   ( Quantity  <25001 ): feeamount =  1442 +   ( Quantity  -  10001 )   *  0.12
+  elif BillID == 8904  and   pack_id =='PCKG' and ( Quantity  >=25001 )  and   ( Quantity  <  50001 ): feeamount =  3242 +   ( Quantity  -  25001 )   *  0.09
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >=25001 )  and   ( Quantity  <  50001 ): feeamount =  3242 +   ( Quantity  -  25001 )   *  0.09
+  elif BillID == 8904  and   pack_id =='PCK'  and ( Quantity  >=  50001 ): feeamount =  5492 +   ( Quantity  -  50001 )   *  0.07
+  elif BillID == 8904  and   pack_id =='PCKG' and ( Quantity  >=  50001 ): feeamount =  5492 +   ( Quantity  -  50001 )   *  0.07
+  elif BillID == 9303  and   pack_id =='PCKG':feeamount =  0.18  * Quantity
+  elif BillID == 9303  and   pack_id =='PCK':feeamount =  0.18  * Quantity
+  elif BillID == 9306  and   pack_id =='PCK'  and ( Quantity  <  5000000001 ): feeamount = Quantity  *     0.00015
+  elif BillID == 9306  and   pack_id =='PCKG' and  ( Quantity  <  5000000001 ): feeamount = Quantity  *     0.00015
+  elif BillID == 9306  and   pack_id =='PCKG' and  ( Quantity  >=  10000000001 ): feeamount =   (    Quantity  -  10000000000 )   *      0.0001 +   (  5000000000 *   0.00015 ) +   (  5000000000 *   0.00012 )
+  elif BillID == 9306  and   pack_id =='PCK'  and ( Quantity  >=  10000000001 ): feeamount =   (    Quantity  -  10000000000 )   *     0.0001 +   (  5000000000 *   0.00015 ) +   (  5000000000 *   0.00012 )
+  elif BillID == 9306  and   pack_id =='PCKG' and  ( Quantity  >=  5000000001 ) and  ( Quantity  <  10000000001 ): feeamount =   ( Quantity  -     5000000000 )   *     0.00012 +   (  5000000000 *   0.00015 )
+  elif BillID == 9306  and   pack_id =='PCK'  and ( Quantity  >=  5000000001 ) and  ( Quantity  <  10000000001 ): feeamount =   ( Quantity  -     5000000000 )   *     0.00012 +   (  5000000000 *   0.00015 )
+  elif BillID == 9307  and   pack_id =='PCK'  and ( Quantity  >  0 ): feeamount = Quantity  *     0.018
+  elif BillID == 9307  and   pack_id =='PCKG' and  ( Quantity  >  0 ): feeamount = Quantity  *     0.018
+  elif BillID == 9309  and   pack_id =='PCK':feeamount =  0.18  * Quantity
+  elif BillID == 9309  and   pack_id =='PCKG':feeamount =  0.18  * Quantity
+  elif BillID == 9402  and   pack_id =='PCKG':feeamount =  Quantity * 0.42
+  elif BillID == 9402  and   pack_id =='PCK':feeamount =  Quantity * 0.42
+  elif BillID == 9404  and   pack_id =='PCK':feeamount =  Quantity * 0.42
+  elif BillID == 9404  and   pack_id =='PCKG':feeamount =  Quantity * 0.42
+  elif BillID == 9406  and   pack_id =='PCK':feeamount =   Quantity *  0.08
+  elif BillID == 9406  and   pack_id =='PCKG':feeamount =   Quantity *  0.08
+  elif BillID == 9413  and   pack_id =='PCKG' : feeamount =     0.5 * Quantity
+  elif BillID == 9413  and   pack_id =='PCK' : feeamount =     0.5 * Quantity
+  elif BillID == 9415  and   pack_id =='PCK': feeamount =     0.5 * Quantity
+  elif BillID == 9415  and   pack_id =='PCKG': feeamount =     0.5 * Quantity
+  elif BillID == 9424  and   pack_id =='PCKG':feeamount = 0.50 * Quantity
+  elif BillID == 9424  and   pack_id =='PCK':feeamount = 0.50 * Quantity
+  elif BillID == 9429  and   pack_id =='PCKG':feeamount =   Quantity *  0.60
+  elif BillID == 9429  and   pack_id =='PCK':feeamount =   Quantity *  0.60
+  elif BillID == 9443  and   pack_id =='PCK':feeamount =  Quantity * 2.50
+  elif BillID == 9443  and   pack_id =='PCKG':feeamount =  Quantity * 2.50
+  elif BillID == 9502  and   pack_id =='PCK':feeamount =  Quantity * 0.42
+  elif BillID == 9502  and   pack_id =='PCKG':feeamount =  Quantity * 0.42
+  elif BillID == 9504  and   pack_id =='PCK':feeamount =  Quantity * 0.42
+  elif BillID == 9504  and   pack_id =='PCKG':feeamount =  Quantity * 0.42
+  elif BillID == 9506  and   pack_id =='PCKG':feeamount =   Quantity *  0.08
+  elif BillID == 9506  and   pack_id =='PCK':feeamount =   Quantity *  0.08
+  elif BillID == 9513  and   pack_id =='PCKG' : feeamount =     0.5 * Quantity
+  elif BillID == 9513  and   pack_id =='PCK' : feeamount =     0.5 * Quantity
+  elif BillID == 9515  and   pack_id =='PCKG': feeamount =     0.5 * Quantity
+  elif BillID == 9515  and   pack_id =='PCK': feeamount =     0.5 * Quantity
+  elif BillID == 9520  and   pack_id =='PCKG':feeamount = Quantity * 0.07
+  elif BillID == 9520  and   pack_id =='PCK':feeamount = Quantity * 0.07
+  elif BillID == 9521  and   pack_id =='PCK':feeamount = Quantity  *  0.07
+  elif BillID == 9521  and   pack_id =='PCKG':feeamount = Quantity  *  0.07
+  elif BillID == 9524  and   pack_id =='PCK':feeamount = 0.50 * Quantity
+  elif BillID == 9524  and   pack_id =='PCKG':feeamount = 0.50 * Quantity
+  elif BillID == 9529  and   pack_id =='PCKG':feeamount =   Quantity *  0.60
+  elif BillID == 9529  and   pack_id =='PCK':feeamount =   Quantity *  0.60
+  elif BillID == 9543  and   pack_id =='PCK':feeamount =   Quantity  *  2.50
+  elif BillID == 9543  and   pack_id =='PCKG':feeamount =   Quantity  *  2.50
+  elif BillID == 9547  and   pack_id =='PCKG':feeamount = Quantity  *  0.07
+  elif BillID == 9547  and   pack_id =='PCK':feeamount = Quantity  *  0.07     
   
   return(feeamount) 
 #  print() type(feeamount) 
@@ -725,15 +725,15 @@ def recon_diff(prod_id, pack_id, basis):
     
 #Code by Shravya for other fee types --End
 # Added 8802,8803,8804 by Shravya 
-#  if prod_id == 8802 or prod_id == 8803 or prod_id == 8804 or prod_id == 8805 : 
+#  if BillID == 8802 or BillID == 8803 or BillID == 8804 or BillID == 8805 : 
   #    fee_amount = fee_amount
  
   
     
- # if prod_id == 8808 and fee_amount < 200:
+ # if BillID == 8808 and fee_amount < 200:
    # fee_amount = 200
 #Added 8800 by Shravya      
-#   elif prod_id == 8801 or prod_id == 8800: 
+#   elif BillID == 8801 or BillID == 8800: 
  #   if fee_amount < 5:
   #    fee_amount = 5
 
