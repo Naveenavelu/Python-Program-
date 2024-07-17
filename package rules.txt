@@ -729,13 +729,3 @@ def recon_diff(BillID, pack_id, Quantity):
   #    fee_amount = fee_amount
  
   
-    
- # if BillID == 8808 and fee_amount < 200:
-   # fee_amount = 200
-#Added 8800 by Shravya      
-#   elif BillID == 8801 or BillID == 8800: 
- #   if fee_amount < 5:
-  #    fee_amount = 5
-
-    
-#  return round(fee_amount, 2)
